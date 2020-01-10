@@ -6,6 +6,7 @@ library(readxl)
 library(ggplot2)
 library(reshape)
 
+#following function is for importing the excel sheets
 obtain_sheets <- function(filename, valid = FALSE) {
   sheets <- readxl::excel_sheets(filename)
   x <- lapply(sheets, function(X) readxl::read_excel(filename, sheet = X))
